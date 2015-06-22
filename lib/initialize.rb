@@ -23,7 +23,3 @@ class Parser
     return args
   end
 end
-
-options = Parser.parse(ARGV)
-
-options.count
