@@ -1,5 +1,1 @@
-#fix formatting
-#clean up code
 #unit test
-#fix naming conventions
-#move printing logic to seperate class
