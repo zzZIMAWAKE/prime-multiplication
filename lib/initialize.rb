@@ -1,25 +1,11 @@
-require 'optparse'
+require_relative 'option-parser.rb'
+require_relative 'prime-multiplication/prepare-prime.rb'
+require_relative 'prime-multiplication/console-print.rb'
 
-Options = Struct.new(:count)
+options = Parser.parse(ARGV)
 
-class Parser
-  def self.parse(options)
-    args = Options.new(10)
+primes = PreparePrime.new(options.count)
+primeNumbers = primes.prepare_primes
 
-    opt_parser = OptionParser.new do |opts|
-      opts.banner = "Usage: initialize.rb --count <number of primes>"
-
-      opts.on("--count C", Integer, "Number of primes C") do |c|
-        args.count = c
-      end
-
-      opts.on("-h", "--help", "Prints this help") do
-        puts opts
-        exit
-      end
-    end
-
-    opt_parser.parse!(options)
-    return args
-  end
-end
+print = ConsolePrint.new(primeNumbers)
+print.begin_print
