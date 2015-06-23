@@ -1,1 +1,3 @@
-#unit test
+#implement sieve of Eratothenes
+#add optinal argument for brute force / sieve
+#output to txt document for any limit above 15 to prevent format breaking

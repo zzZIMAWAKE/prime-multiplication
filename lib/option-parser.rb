@@ -12,7 +12,7 @@ class Parser
                     " in the console"
 
       opts.on("--count C", Integer, "Number of primes C") do |c|
-        args.count = c
+        args.count = c.abs
       end
 
       opts.on("-h", "--help", "Prints this help") do
@@ -22,6 +22,7 @@ class Parser
     end
 
     opt_parser.parse!(options)
+
     return args
   end
 end

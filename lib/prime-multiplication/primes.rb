@@ -8,7 +8,7 @@ class Primes
 
 	#populate array of primes up to the user
 	#specified limit
-	#@return araray
+	#@return array
 	def prepare_primes
 		j = 0
 
