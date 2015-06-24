@@ -2,14 +2,14 @@
 Coding challenge - create a multiplication table of prime numbers
 
 By default this uses the sieve of Eratothenes algorithm to find prime numbers
-you can set it to use a brute force approach by adding --brute-force when running
-the script
 
 #To run:
 To run simply navigate to your prime-multiplication/lib folder and run:
-ruby initialize.rb [--count 1-*]
+ruby initialize.rb [--count 1-*] [--brute-force]
 
 [] - is optional
+--count sets the limit of prime numbers
+--brute-force sets the use of the a brute-force approach to find prime numbers
 
 #To run tests:
 Navigate to prime-multiplication/test and run:
