@@ -14,7 +14,7 @@ class TestPrimes < Test::Unit::TestCase
     #returns array of correct size
     def test_primes
         primes = Primes.new(10)
-        result = primes.prepare_primes
+        result = primes.get_primes
         assert_equal(10, result.count)
         assert_equal(true, result.kind_of?(Array))
         assert_equal(@tenPrimes, result)

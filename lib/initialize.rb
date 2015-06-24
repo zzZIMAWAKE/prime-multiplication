@@ -1,17 +1,18 @@
 require_relative 'option-parser.rb'
 require_relative 'prime-multiplication/primes.rb'
-require_relative 'prime-multiplication/console-print.rb'
+require_relative 'prime-multiplication/console-printer.rb'
+require_relative 'prime-multiplication/sieve-of-eratosthenes.rb'
 
 options = Parser.parse(ARGV)
 
 primes = Primes.new(options.count)
 
 if (options.brute === true)
-    primeNumbers = primes.prepare_primes
+  prime_numbers = primes.get_primes
 else
-    primes.calculate_ceiling
-    primeNumbers = primes.sieve_of_eratothenes
+  ceiling = SieveOfEratosthenes.calculate_ceiling(options.count)
+  prime_numbers = SieveOfEratosthenes.get_primes(ceiling, options.count)
 end
 
-print = ConsolePrint.new(primeNumbers)
-print.begin_print
+printer = ConsolePrinter.new(prime_numbers)
+printer.begin_print

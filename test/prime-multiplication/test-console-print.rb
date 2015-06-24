@@ -1,4 +1,4 @@
-require_relative "../../lib/prime-multiplication/console-print.rb"
+require_relative "../../lib/prime-multiplication/console-printer.rb"
 require "test/unit"
  
 class TestPrimes < Test::Unit::TestCase
@@ -12,7 +12,7 @@ class TestPrimes < Test::Unit::TestCase
     end
 
     def test_calculate_spacing
-        printer = ConsolePrint.new(@tenPrimes)
+        printer = ConsolePrinter.new(@tenPrimes)
         assert_equal(3, printer.calculate_spacing)
     end
 end
