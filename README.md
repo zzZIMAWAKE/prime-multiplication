@@ -5,6 +5,7 @@ By default this uses the sieve of Eratothenes algorithm to find prime numbers
 
 #To run:
 To run simply navigate to your prime-multiplication/lib folder and run:
+
 ruby initialize.rb [--count 1-*] [--brute-force]
 
 [] - is optional
